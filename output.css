@@ -249,6 +249,8 @@
   }
   ul {
     list-style-type: disc;
+    list-style: square;
+    margin-inline: calc(var(--spacing) * 10);
   }
   a {
     text-decoration: underline;

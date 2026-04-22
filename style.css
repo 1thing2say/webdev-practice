@@ -11,15 +11,19 @@
 
     ul {
         list-style-type: disc;
+        list-style: square;
+        @apply mx-10;
     }
 
     a {
         text-decoration: underline;
         @apply text-blue-300;
     }
+
     hr {
         @apply my-10 text-emerald-400 border-dashed border-[1.5];
     }
+
     button {
         @apply border;
     }
@@ -32,16 +36,18 @@
 }
 
 @utility flexy {
-    @apply flex text-center justify-center 
+    @apply flex text-center justify-center
 }
 
 @layer components {
     .btn {
         @apply cursor-pointer transition-colors px-5 py-3;
     }
+
     .btn1 {
         @apply border-emerald-400 bg-white text-black;
     }
+
     .btn1:hover {
         @apply bg-emerald-100;
     }
