@@ -37,14 +37,14 @@ let username;
 
 document.getElementById("mySubmit").onclick = function () {
     username = document.getElementById("myText").value;
-    document.getElementById("header").textContent = `Hello ${username}`;
+    document.getElementById("header").textContent = `${greeting} ${username}.`;
 }
 
 // type conversion
 
-ageString = String(age);
-console.log(age, typeof age);
-document.getElementById("type0").textContent = `${age} ${typeof age}, ${ageString} ${typeof ageString}`;
+// ageString = String(age);
+// console.log(age, typeof age);
+// document.getElementById("type0").textContent = `${age} ${typeof age}, ${ageString} ${typeof ageString}`;
 
 // counter program
 
@@ -74,7 +74,7 @@ resetBtn.onclick = function () {
 const PI = Math.PI;
 console.log(PI);
 
-z = Math.sin(PI);
+const z = Math.sin(PI);
 console.log(z);
 
 // random number generator
@@ -85,8 +85,8 @@ console.log(randomNum);
 let dice = Math.floor(Math.random() * 6) + 1;
 console.log(dice);
 
-randomLabel = document.getElementById("randomLabel");
-randomButton = document.getElementById("randomButton");
+let randomLabel = document.getElementById("randomLabel");
+let randomButton = document.getElementById("randomButton");
 
 randomButton.onclick = () => {
     randomNum = Math.trunc(Math.random() * 100) + 1;
@@ -100,7 +100,7 @@ let age;
 document.getElementById("ifSubmit").onclick = () => {
     age = document.getElementById("ifInput").value;
     if (isNaN(age) || age === "") {
-        document.getElementById("ifLabel").textContent = `Enter an integer.`
+        document.getElementById("ifLabel").textContent = `Enter an integer.`;
     } else {
         age = Number(age);
         document.getElementById("ifLabel").textContent = `You are ${age} years old.`;
@@ -116,3 +116,37 @@ document.getElementById("ifSubmit").onclick = () => {
         }
     }
 }
+
+// check property
+
+document.getElementById("checkBox").onclick = () => {
+    if (document.getElementById("checkBox").checked) {
+        document.getElementById("checkLabel").textContent = `checked!`;
+    } else {
+        document.getElementById("checkLabel").textContent = `unchecked.`;
+    }
+}
+
+document.getElementById("checkSubmit").onclick = () => {
+    if (document.getElementById("radio0").checked) {
+        document.getElementById("optionLabel").textContent = `you have chosen emerald`;
+    }
+    else if (document.getElementById("radio1").checked) {
+        document.getElementById("optionLabel").textContent = `you have chosen blue`;
+
+    }
+    else if (document.getElementById("radio2").checked) {
+        document.getElementById("optionLabel").textContent = `you have chosen indigo`;
+
+    }
+    else {
+        document.getElementById("optionLabel").textContent = `please choose an option.`;
+    }
+}
+
+// ternary operator
+const time = new Date().getHours();
+let greeting = time <= 12 ? "Good morning" : "Good afternoon";
+console.log(greeting);
+document.getElementById("header").textContent = greeting;
+

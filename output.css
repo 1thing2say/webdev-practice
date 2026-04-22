@@ -10,6 +10,8 @@
     --color-emerald-100: oklch(95% 0.052 163.051);
     --color-emerald-400: oklch(76.5% 0.177 163.223);
     --color-blue-300: oklch(80.9% 0.105 251.813);
+    --color-blue-400: oklch(70.7% 0.165 254.624);
+    --color-indigo-400: oklch(67.3% 0.182 276.935);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -226,6 +228,15 @@
   .text-9xl {
     font-size: var(--text-9xl);
     line-height: var(--tw-leading, var(--text-9xl--line-height));
+  }
+  .accent-blue-400 {
+    accent-color: var(--color-blue-400);
+  }
+  .accent-emerald-400 {
+    accent-color: var(--color-emerald-400);
+  }
+  .accent-indigo-400 {
+    accent-color: var(--color-indigo-400);
   }
 }
 @layer base {
