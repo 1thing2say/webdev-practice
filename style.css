@@ -51,4 +51,33 @@
     .btn1:hover {
         @apply bg-emerald-100;
     }
+
+    .gridTest {
+        @apply border-2 border-emerald-400 my-2 mx-2 py-3 px-6 rounded-xl bg-emerald-100
+    }
+
+    .gridTest-item-1 {
+        /* navbar */
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .gridTest-item-2 {
+        /* main */
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+    }
+
+    .gridTest-item-3 {
+        /* header */
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        @apply text-5xl;
+    }
+
+    .gridTest-item-4 {
+        /* footer */
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+    }
 }

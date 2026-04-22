@@ -21,6 +21,7 @@
     --text-5xl--line-height: 1;
     --text-9xl: 8rem;
     --text-9xl--line-height: 1;
+    --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -204,8 +205,20 @@
   .block {
     display: block;
   }
+  .grid {
+    display: grid;
+  }
   .inline {
     display: inline;
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .grid-rows-\[100px_auto\] {
+    grid-template-rows: 100px auto;
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
   .space-x-5 {
     :where(& > :not(:last-child)) {
@@ -285,6 +298,35 @@
   }
   .btn1:hover {
     background-color: var(--color-emerald-100);
+  }
+  .gridTest {
+    margin-inline: calc(var(--spacing) * 2);
+    margin-block: calc(var(--spacing) * 2);
+    border-radius: var(--radius-xl);
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+    border-color: var(--color-emerald-400);
+    background-color: var(--color-emerald-100);
+    padding-inline: calc(var(--spacing) * 6);
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .gridTest-item-1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .gridTest-item-2 {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
+  .gridTest-item-3 {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+  .gridTest-item-4 {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
   }
 }
 @property --tw-border-style {
