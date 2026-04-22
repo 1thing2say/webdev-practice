@@ -202,6 +202,9 @@
   .block {
     display: block;
   }
+  .inline {
+    display: inline;
+  }
   .space-x-5 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;

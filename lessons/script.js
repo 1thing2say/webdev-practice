@@ -94,3 +94,24 @@ randomButton.onclick = () => {
     randomNum = Math.trunc(Math.random() * 100) + 1;
     randomLabel.textContent = randomNum;
 }
+
+// if statements
+
+if (age >= 18) {
+    console.log("you are old enough.");
+}
+else if (age <= 0) {
+    console.log("your age cannot be below 0.");
+}
+else {
+    console.log("you are too young.");
+}
+
+document.getElementById("ifSubmit").onclick = () => {
+    age = document.getElementById("ifInput").value;
+    if (isNaN(age)) {
+        document.getElementById("ifLabel").textContent = `Enter an integer.`
+    } else {
+        document.getElementById("ifLabel").textContent = `You are ${age} years old.`;
+    }
+}
