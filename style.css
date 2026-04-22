@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+    h1 {
+        @apply text-2xl;
+    }
+
+    body {
+        margin: 20px 20px;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    a {
+        text-decoration: underline;
+        @apply text-blue-300;
+    }
+    hr {
+        @apply my-10 text-emerald-400 border-dashed border-[1.5];
+    }
+    button {
+        @apply border;
+    }
+}
+
+@utility gbutton {
+    @apply text-5xl border-2 border-emerald-400 rounded-2xl bg-emerald-100 flexy border-dashed;
+    padding: 15px 10px;
+    margin: 20px 20px;
+}
+
+@utility flexy {
+    @apply flex text-center justify-center 
+}
+
+@layer components {
+    .btn {
+        @apply cursor-pointer transition-colors px-5 py-3;
+    }
+    .btn1 {
+        @apply border-emerald-400 bg-white text-black;
+    }
+    .btn1:hover {
+        @apply bg-emerald-100;
+    }
+}
