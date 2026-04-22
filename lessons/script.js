@@ -4,9 +4,7 @@ let x;
 x = 100;
 console.log(x);
 console.log('hello');
-let age = 25;
 let gpa = 2.1;
-console.log(`You are ${age} years old`);
 console.log(`Your gpa is: ${gpa}`);
 console.log(typeof gpa);
 let firstname = "David";
@@ -97,21 +95,24 @@ randomButton.onclick = () => {
 
 // if statements
 
-if (age >= 18) {
-    console.log("you are old enough.");
-}
-else if (age <= 0) {
-    console.log("your age cannot be below 0.");
-}
-else {
-    console.log("you are too young.");
-}
+let age;
 
 document.getElementById("ifSubmit").onclick = () => {
     age = document.getElementById("ifInput").value;
-    if (isNaN(age)) {
+    if (isNaN(age) || age === "") {
         document.getElementById("ifLabel").textContent = `Enter an integer.`
     } else {
+        age = Number(age);
         document.getElementById("ifLabel").textContent = `You are ${age} years old.`;
+
+        if (age >= 18) {
+            document.getElementById("resultElement").textContent = "you are old enough.";
+        }
+        else if (age <= 0) {
+            document.getElementById("resultElement").textContent = "your age cannot be 0 or below.";
+        }
+        else {
+            document.getElementById("resultElement").textContent = "you are too young.";
+        }
     }
 }
