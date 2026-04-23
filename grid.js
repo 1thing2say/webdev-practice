@@ -18,7 +18,7 @@ function toggleFooterMode() {
     if (isClockMode) {
         // Switch to clock mode: fade in the first time
         changeFooterTextSmoothly(new Date().toLocaleTimeString());
-        
+
         // Then start a timer to update it every second WITHOUT fading 
         // (so it doesn't blink annoyingly every single second)
         clockInterval = setInterval(() => {
@@ -27,7 +27,7 @@ function toggleFooterMode() {
     } else {
         // Switch to static text mode: stop the clock
         clearInterval(clockInterval);
-        
+
         // Fade back to the static text
         changeFooterTextSmoothly(staticText);
     }

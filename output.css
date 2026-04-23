@@ -8,7 +8,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-emerald-100: oklch(95% 0.052 163.051);
-    --color-emerald-200: oklch(90.5% 0.093 164.15);
     --color-emerald-300: oklch(84.5% 0.143 164.978);
     --color-emerald-400: oklch(76.5% 0.177 163.223);
     --color-blue-300: oklch(80.9% 0.105 251.813);
@@ -256,6 +255,9 @@
   .bg-\[url\(\'images\/green_pattern1\.jpg\'\)\] {
     background-image: url('images/green_pattern1.jpg');
   }
+  .bg-auto {
+    background-size: auto;
+  }
   .bg-cover {
     background-size: cover;
   }
@@ -267,6 +269,9 @@
   }
   .bg-no-repeat {
     background-repeat: no-repeat;
+  }
+  .bg-repeat {
+    background-repeat: repeat;
   }
   .text-9xl {
     font-size: var(--text-9xl);
