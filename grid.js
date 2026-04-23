@@ -33,8 +33,8 @@ function toggleFooterMode() {
     }
 }
 
-// Start the cycle: toggle every 10 seconds (10,000 milliseconds)
-setInterval(toggleFooterMode, 10000);
+//setInterval(toggleFooterMode, 5000);
+setTimeout(toggleFooterMode, 5000);
 
 // Initialize the first state so it's not blank
 footer.textContent = staticText;

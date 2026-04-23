@@ -8,6 +8,8 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-emerald-100: oklch(95% 0.052 163.051);
+    --color-emerald-200: oklch(90.5% 0.093 164.15);
+    --color-emerald-300: oklch(84.5% 0.143 164.978);
     --color-emerald-400: oklch(76.5% 0.177 163.223);
     --color-blue-300: oklch(80.9% 0.105 251.813);
     --color-blue-400: oklch(70.7% 0.165 254.624);
@@ -251,6 +253,21 @@
   .border-blue-300 {
     border-color: var(--color-blue-300);
   }
+  .bg-\[url\(\'images\/green_pattern1\.jpg\'\)\] {
+    background-image: url('images/green_pattern1.jpg');
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-fixed {
+    background-attachment: fixed;
+  }
+  .bg-center {
+    background-position: center;
+  }
+  .bg-no-repeat {
+    background-repeat: no-repeat;
+  }
   .text-9xl {
     font-size: var(--text-9xl);
     line-height: var(--tw-leading, var(--text-9xl--line-height));
@@ -318,7 +335,7 @@
     border-radius: var(--radius-xl);
     border-style: var(--tw-border-style);
     border-width: 2px;
-    border-color: var(--color-emerald-400);
+    border-color: var(--color-emerald-300);
     background-color: var(--color-emerald-100);
     padding-inline: calc(var(--spacing) * 6);
     padding-block: calc(var(--spacing) * 3);

@@ -53,7 +53,7 @@
     }
 
     .gridTest {
-        @apply border-2 border-emerald-400 my-2 mx-2 py-3 px-6 rounded-xl bg-emerald-100;
+        @apply border-2 border-emerald-300 my-2 mx-2 py-3 px-6 rounded-xl bg-emerald-100;
     }
 
     .gridTest-item-1 {
