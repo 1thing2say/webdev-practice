@@ -53,13 +53,14 @@
     }
 
     .gridTest {
-        @apply border-2 border-emerald-400 my-2 mx-2 py-3 px-6 rounded-xl bg-emerald-100
+        @apply border-2 border-emerald-400 my-2 mx-2 py-3 px-6 rounded-xl bg-emerald-100;
     }
 
     .gridTest-item-1 {
         /* navbar */
         grid-column: 1 / 2;
         grid-row: 2 / 3;
+        align-self: start;
     }
 
     .gridTest-item-2 {
@@ -79,5 +80,10 @@
         /* footer */
         grid-column: 1 / 4;
         grid-row: 3 / 4;
+        transition: opacity 0.3s ease-in-out;
+        opacity: 1;
+    }
+    .gridTest-item-4-after {
+        opacity: 0;
     }
 }
