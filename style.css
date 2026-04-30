@@ -53,7 +53,9 @@
     }
 
     .gridTest {
-        @apply border-2 border-emerald-300 my-2 mx-2 py-3 px-6 rounded-xl bg-emerald-100;
+        @apply my-2 mx-2 py-3 px-6 bg-emerald-100/50;
+        @apply backdrop-blur-xl drop-shadow-sm rounded-xl;
+        border: 2px solid rgba(255, 255, 255, 0.5);
     }
 
     .gridTest-item-1 {
@@ -83,6 +85,7 @@
         transition: opacity 0.3s ease-in-out;
         opacity: 1;
     }
+
     .gridTest-item-4-after {
         opacity: 0;
     }
